@@ -1,0 +1,546 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .homeWrap, .userWrap, .detailWrap{
+	@include rect(100%,100%);
+	@include text-color(#333);
+	@include background-color(#f2f2f2);
+}
+
+.iconfont{
+	@include text-color(black);
+}
+
+//主页======================================================================
+.homeWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		position:relative;
+		.city-select{
+			float:left;
+			@include rect(1.2rem,0.6rem);
+			a{
+				@include rect(100%,100%);
+				@include flexbox();
+				@include justify-content();
+				@include align-items();
+				@include text-color(black);
+				i{
+					@include font-size(0.17rem);
+				}
+			}
+		}
+		.shop-car{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			a{
+				@include rect(100%,100%);
+				@include flexbox();
+				@include justify-content();
+				@include align-items();
+				i{
+					@include font-size(0.3rem);
+					@include margin(-4px 0 0 0);
+				}
+			}
+		}
+		.to-user{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+			}
+		}
+		.logo{
+			@include rect(0.72rem,0.31rem);
+			background: url(http://static.loho88.com/assets/images/logo.head.png) no-repeat center;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			@include margin(auto);
+		}
+	}
+	section{
+		@include flex();
+		@include rect(100%,auto);
+		@include overflow();
+		.home-banner{
+			@include rect(100%,auto);
+			.am-wingblank.am-wingblank-lg{
+				margin: 0;
+				img{
+					@include rect(100%,auto);
+				}
+			}
+		}
+		.kind-list{
+			@include rect(100%,auto);
+			@include padding(0 0 0.36rem 0);
+			@include background-color(#ffffff);
+			// @include border(0 0 1px 0, solid #e1e1e1);
+			li{
+				@include rect(25%,1.1rem);
+				@include text-align(); 
+				float:left;
+				a{
+					display:block;
+					@include rect(100%,100%);
+					@include padding(0.18rem 0 0 0);
+					img{
+						@include rect(0.51rem,0.51rem);
+						@include margin(0 0 0.11rem 0);
+					}
+					p{
+						@include font-size(0.14rem);
+						@include text-color(#333);
+					}
+				}
+			}
+			
+		}
+		.kind-list:after{
+			content: ".";
+			clear: both;
+			display: block;
+			height: 0;
+			overflow: hidden;
+			visibility: hidden;
+		}
+		.style-up{
+			@include rect(100%,1.7rem);
+			@include padding(0.1rem);
+			@include background-color(#f2f2f2);
+			img{
+				@include rect(100%,1.5rem);
+			}
+		}
+		.popular, .last, .identical{
+			@include rect(100%,auto);
+			@include margin(0 0 0.1rem 0);
+			@include background-color(#ffffff);
+			.popular-header, .last-header, .identical-header{
+				@include rect(100%,0.42rem);
+				@include overflow();
+				@include padding(0.1rem);
+				position:relative;
+				.sidelined{
+					position: absolute;
+					@include rect(0.05rem,0.34rem);
+					@include background-color(red);
+					left: 0;
+					top: 0.04rem;
+					border-radius: 0.015rem;
+				}
+				h3{
+					@include rect(100%,100%);
+					@include flexbox();
+					@include justify-content(space-between);
+					@include align-items();
+					@include font-size(0.16rem);
+					>span{
+						color: #222222;
+					}
+					>a{
+						span{
+							font-weight:normal;
+							color: #e51c23;
+							i{
+								color: #e51c23;
+							}
+						}
+					}
+				}
+			}
+			.popular-img, .last-img, .identical-img{
+				@include rect(100%,1rem);
+				img{
+					@include rect(100%,1rem);
+				}
+			}
+			.popular-list, .last-list, .identical-list{
+				.identical-list-li-0{
+					padding: 0.12rem;
+					float: left;
+					width: 50%;
+					border-right: 1px solid #E6E6E6;
+					a{
+						text-align: center;
+						display: block;
+						@include text-color(#333);
+						@include rect(100%,auto);
+						@include font-size(0.14rem);
+						.identical-list-title{
+							@include rect(100%,0.4rem);
+						}
+						.identical-list-e-title{
+							@include rect(100%,0.52rem);
+						}
+						.identical-list-img{
+							@include rect(100%,0.65rem);
+						}
+					}
+				}
+				.identical-list-li-1{
+					padding: 0.12rem;
+					float: left;
+					width: 50%;
+					border-bottom: 1px solid #E6E6E6;
+					a{
+						text-align: center;
+						display: block;
+						@include text-color(#333);
+						@include rect(100%,auto);
+						@include font-size(0.14rem);
+						.identical-list-title{
+							@include rect(100%,0.4rem);
+						}
+						.identical-list-e-title{
+							@include rect(100%,auto);
+						}
+						.identical-list-img{
+							@include rect(100%,0.65rem);
+						}
+					}
+				}
+				.identical-list-li-2{
+					padding: 0.12rem;
+					float: left;
+					width: 50%;
+					a{
+						text-align: center;
+						display: block;
+						@include text-color(#333);
+						@include rect(100%,auto);
+						@include font-size(0.14rem);
+						.identical-list-title{
+							@include rect(100%,0.4rem);
+						}
+						.identical-list-e-title{
+							@include rect(100%,auto);
+						}
+						.identical-list-img{
+							@include rect(100%,0.65rem);
+						}
+					}
+				}
+		
+				.popular-list-li, .last-list-li{
+					@include rect(50%,auto);
+					border: 0.25px solid #e1e1e1;
+					float: left;
+					@include padding(0.12rem);
+					a{
+						text-align: center;
+						display: block;
+						@include text-color(#333);
+						@include rect(100%,auto);
+						@include font-size(0.14rem);
+						.popular-list-title, .last-list-title{
+							@include rect(100%,0.4rem);
+						}
+						.popular-list-e-title, .last-list-e-title{
+							@include rect(100%,0.52rem);
+						}
+						.popular-list-img, .last-list-img{
+							@include rect(100%,0.65rem);
+						}
+					}
+				}
+			}
+			.popular-list:after, .last-list:after, .identical-list:after{
+				content: ".";
+				clear: both;
+				display: block;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+		}
+		.home-bottom{
+			@include rect(100%,auto);
+			@include background-color(#1d1d1d);
+			@include margin(0 0 0.15rem 0);
+			.home-bottom-top{
+				@include rect(100%,auto);
+				@include flexbox();
+				.home-bottom-top-left{
+					@include rect(50%,0.84rem);
+					@include line-height(0.7rem);
+					@include font-size(0.14rem);
+					@include text-align();
+					border-right: 2px solid #000;
+					border-bottom: 2px solid #000;
+					a{
+						@include text-color(#fff);
+						i{
+							@include text-color(red);
+						}
+					}
+				}
+				.home-bottom-top-right{
+					@include rect(50%,0.84rem);
+					@include font-size(0.12rem);
+					@include padding(0.23rem 0 0 0.1rem);
+					border-bottom: 2px solid #000;
+					i{
+						@include font-size(0.26rem);
+						@include text-color(red);
+						float: left;
+					}
+					a{
+						@include text-color(#fff);
+						float: left;
+					}
+					span{
+						@include text-color(#666);
+						float: left;
+					}
+				}
+			}
+			.home-bottom-center{
+				@include rect(100%,0.96rem);
+				@include text-align();
+				@include padding(0.26rem);
+				border-bottom: 2px solid #000;
+				img{
+					@include rect(0.75rem,0.44rem);
+				}
+				
+			}
+			.home-bottom-bottom{
+				@include padding(0.1rem);
+				@include rect(100%,auto);
+				@include text-color(#fff);
+				@include font-size(0.12rem);
+				@include text-align();
+				a{
+					@include text-color(#fff);
+				}
+			}
+		}
+	}
+	footer{
+		@include rect(100%,0.54rem);
+		@include background-color(#fff);
+		@include flexbox();
+		>div{
+			@include flex();	
+			@include flexbox();
+			@include justify-content();
+			@include flex-direction(column);
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+				@include line-height(0.24rem);
+			}
+			p{
+				@include font-size(0.12rem);
+				@include line-height(0.18rem);
+			}
+		}
+		
+	}
+}
+
+//用户中心页======================================================================
+.userWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		position:relative;
+		.goBack{
+			float:left;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+			}
+		}
+		.shop-car{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.26rem);
+				@include margin(-4px 0 0 0);
+			}
+			
+		}
+		.kind{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.14rem);
+			}
+		}
+		.login{
+			@include rect(0.5rem,100%);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			@include font-size(0.16rem);
+			position: absolute;
+			left: 0;
+			margin: auto;
+			right: 0;
+		}
+	}
+	section{
+		@include flex();
+		@include rect(100%,auto);
+		@include overflow();
+		.bannerImg{
+			@include rect(100%,auto);
+		}
+		.loginTab{
+			@include rect(100%,auto);
+			@include flexbox();
+			@include font-size(0.14rem);
+			@include background-color(#fff);
+			div{
+				@include rect(50%,0.5rem);
+				@include text-align();
+				@include line-height(0.5rem);
+				position: relative;
+			}
+			.loginTabOne:after{
+				content: ' ';
+				position: absolute;
+				width: 1px;
+				height: 0.2rem;
+				display: block;
+				background: #e1e1e1;
+				right: 0;
+				top: 0.15rem;
+			}
+		}
+		.loginContent{
+			@include background-color(#fff);
+			@include margin(0.1rem 0);
+			@include padding(0 0 0 0.25rem);
+			@include rect(100%,auto);
+			div{
+				@include rect(100%,auto);
+				border-bottom: 1px #e1e1e1 solid;
+				position: relative;
+				i{
+					@include font-size(0.2rem);
+					@include margin(0 0.1rem 0 0);
+				}
+				input{
+					border: 0;
+					@include rect(90%,0.48rem);
+				}
+				p{
+					position: absolute;
+					right: 0;
+					top: 0;
+					@include rect(35%,100%);
+					@include text-align();
+					@include line-height(0.48rem);
+					@include text-color(#fff);
+					img{
+						@include rect(100%,100%);
+					}
+				}
+				.sendCode{
+					@include background-color(#e8343b);
+				}
+			}
+			
+			
+		}
+		
+	}
+	footer{
+		
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		@include flexbox();
+		@include font-size(0.14rem);
+		div{
+			@include rect(50%,0.6rem);
+			@include text-align();
+			@include line-height(0.6rem);
+			position: relative;
+		}
+		div:nth-of-type(1):after{
+			content: ' ';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			display: block;
+			background: #e1e1e1;
+			right: 0;
+			top: 0;
+		}
+		
+	}
+}
+
+//详情页======================================================================
+.detailWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		.goBack{
+			float:left;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+			}
+		}
+		.shop-car{
+			float:right;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.26rem);
+				@include margin(-4px 0 0 0);
+			}
+			
+		}
+		.kind{
+			float:right;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.14rem);
+			}
+		}
+		
+	}
+
+
+
+}
+

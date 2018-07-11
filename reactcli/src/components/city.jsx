@@ -6,7 +6,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 //引入css样式
 
-class User extends Component {
+class City extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
@@ -18,12 +18,12 @@ class User extends Component {
 	render () {
 		
 		return (
-			<div className='userWrap'>
-				我的
+			<div className='cityWrap'>
+				选择城市
 			</div>
 		)
 	}
 
 }
 
-export default User
+export default City
