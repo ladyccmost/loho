@@ -1,0 +1,13 @@
+@import '@/lib/reset.scss';
+
+.userWrap{
+	@include rect(100%,100%);
+	@include text-color(#333);
+	@include background-color(#f2f2f2);
+}
+
+//用户中心页======================================================================
+.userWrap{
+	@include flexbox();
+	@include flex-direction(column);
+}

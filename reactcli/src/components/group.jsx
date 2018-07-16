@@ -1,12 +1,11 @@
 //引入react模块
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 //引入组件
 
 //引入css样式
 
-class User extends Component {
+class Group extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
@@ -18,12 +17,12 @@ class User extends Component {
 	render () {
 		
 		return (
-			<div className='userWrap'>
-				我的
+			<div className='groupWrap'>
+				团购
 			</div>
 		)
 	}
 
 }
 
-export default User
+export default Group

@@ -1,0 +1,66 @@
+@import '@/lib/reset.scss';
+
+.shopCarWrap{
+	@include rect(100%,100%);
+	@include text-color(#333);
+	@include background-color(#f2f2f2);
+}
+
+//详情页======================================================================
+.shopCarWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		position:relative;
+		.goBack{
+			float:left;
+			@include rect(0.6rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.20rem);
+			}
+		}
+		.car{
+			position:absolute;
+			left:0;
+			right:0;
+			top:0;
+			margin:auto;
+			float:right;
+			@include rect(50%,100%);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.30rem);
+				@include margin(-4px 0 0 0);
+			}
+			
+		}
+		.kind{
+			float:right;
+			@include rect(0.6rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.20rem);
+			}
+		}
+	}
+	section{
+		@include flex();
+		@include rect(100%,auto);
+		@include overflow();
+	}
+	
+	
+	
+	
+}
+

@@ -1,12 +1,12 @@
 //引入react模块
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 //引入组件
 
 //引入css样式
+import '@/components/city/city.scss'
 
-class Group extends Component {
+class City extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
@@ -18,12 +18,12 @@ class Group extends Component {
 	render () {
 		
 		return (
-			<div className='groupWrap'>
-				团购
+			<div className='cityWrap'>
+				选择城市
 			</div>
 		)
 	}
 
 }
 
-export default Group
+export default City
