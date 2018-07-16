@@ -1,0 +1,55 @@
+@import '@/lib/reset.scss';
+
+.detailWrap{
+	@include rect(100%,100%);
+	@include text-color(#333);
+	@include background-color(#f2f2f2);
+}
+
+//详情页======================================================================
+.detailWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		.goBack{
+			float:left;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+			}
+		}
+		.shop-car{
+			float:right;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.26rem);
+				@include margin(-4px 0 0 0);
+			}
+			
+		}
+		.kind{
+			float:right;
+			@include rect(0.5rem,0.5rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.14rem);
+			}
+		}
+		
+	}
+
+
+
+}
+

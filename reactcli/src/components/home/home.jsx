@@ -9,7 +9,7 @@ import Tools from '@/tools/home.js'
 import store from '@/store/index.js'
 
 //引入css样式
-// import style from '@/style/home.scss'
+import '@/components/home/home.scss'
 
 class Home extends Component {
 	constructor (props) {
@@ -60,8 +60,17 @@ class Home extends Component {
 		this.setState({
 			styleUpImg: data[0].pic
 		})
-	} 
-	
+	}
+
+    goGroupPage() {
+		this.props.history.push({
+			pathname: '/group',
+			state: {
+				flag: '/home'
+			}
+		})
+	}
+
 	goUserPage () {
 		this.props.history.push({
 			pathname: '/user',
@@ -294,7 +303,7 @@ class Home extends Component {
 						<i className='iconfont icon-shouye'></i>
 						<p>首页</p>
 					</div>
-					<div>
+					<div onClick={this.goGroupPage.bind(this)}>
 						<i className='iconfont icon-tuangou1'></i>
 						<p>团购</p>
 					</div>

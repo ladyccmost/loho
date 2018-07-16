@@ -1,0 +1,154 @@
+@import '@/lib/reset.scss';
+
+.userWrap{
+	@include rect(100%,100%);
+	@include text-color(#333);
+	@include background-color(#f2f2f2);
+}
+
+//用户中心页======================================================================
+.userWrap{
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		clear:both;
+		position:relative;
+		.goBack{
+			float:left;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.24rem);
+			}
+		}
+		.shop-car{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.26rem);
+				@include margin(-4px 0 0 0);
+			}
+			
+		}
+		.kind{
+			float:right;
+			@include rect(0.6rem,0.6rem);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			i{
+				@include font-size(0.14rem);
+			}
+		}
+		.login{
+			@include rect(0.5rem,100%);
+			@include flexbox();
+			@include justify-content();
+			@include align-items();
+			@include font-size(0.16rem);
+			position: absolute;
+			left: 0;
+			margin: auto;
+			right: 0;
+		}
+	}
+	section{
+		@include flex();
+		@include rect(100%,auto);
+		@include overflow();
+		.bannerImg{
+			@include rect(100%,auto);
+		}
+		.loginTab{
+			@include rect(100%,auto);
+			@include flexbox();
+			@include font-size(0.14rem);
+			@include background-color(#fff);
+			div{
+				@include rect(50%,0.5rem);
+				@include text-align();
+				@include line-height(0.5rem);
+				position: relative;
+			}
+			.loginTabOne:after{
+				content: ' ';
+				position: absolute;
+				width: 1px;
+				height: 0.2rem;
+				display: block;
+				background: #e1e1e1;
+				right: 0;
+				top: 0.15rem;
+			}
+		}
+		.loginContent{
+			@include background-color(#fff);
+			@include margin(0.1rem 0);
+			@include padding(0 0 0 0.25rem);
+			@include rect(100%,auto);
+			div{
+				@include rect(100%,auto);
+				border-bottom: 1px #e1e1e1 solid;
+				position: relative;
+				i{
+					@include font-size(0.2rem);
+					@include margin(0 0.1rem 0 0);
+				}
+				input{
+					border: 0;
+					@include rect(90%,0.48rem);
+				}
+				p{
+					position: absolute;
+					right: 0;
+					top: 0;
+					@include rect(35%,100%);
+					@include text-align();
+					@include line-height(0.48rem);
+					@include text-color(#fff);
+					img{
+						@include rect(100%,100%);
+					}
+				}
+				.sendCode{
+					@include background-color(#e8343b);
+				}
+			}
+			
+			
+		}
+		
+	}
+	footer{
+		
+		@include rect(100%,auto);
+		@include background-color(#ffffff);
+		@include flexbox();
+		@include font-size(0.14rem);
+		div{
+			@include rect(50%,0.6rem);
+			@include text-align();
+			@include line-height(0.6rem);
+			position: relative;
+		}
+		div:nth-of-type(1):after{
+			content: ' ';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			display: block;
+			background: #e1e1e1;
+			right: 0;
+			top: 0;
+		}
+		
+	}
+}
+

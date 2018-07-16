@@ -1,0 +1,161 @@
+@import '@/lib/reset.scss';
+
+/*团购***************/
+#group{
+  @include rect(100%,100%);
+  @include text-color(#333);
+  @include background-color(#fff);
+  @include flexbox();
+  @include flex-direction(column);
+  @include overflow(auto);
+  //@include rect(92%, auto);
+  .container_group{
+    @include margin(0 0 5% 0);
+    header{
+      @include flexbox();
+      @include rect(100%,.4rem);
+      @include background-color(#333);
+      @include justify-content(space-between);
+      @include line-height(.4rem);
+      @include padding(0 .1rem 0 .1rem);
+      i{
+        @include text-color(#fff);
+        @include font-size(.14rem);
+      }
+      span{
+        @include text-color(#fff);
+        @include font-size(.14rem);
+      }
+    }
+    .content_group{
+      @include flex();
+      @include rect(96%,auto);
+      @include margin(2%);
+      @include padding(0 0 2% 0);
+      @include background-color(#fff);
+
+      ul{
+        @include rect(100%,100%);
+        :after{
+          content: '.';
+          clear: both;
+          display: block;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+        }
+        li{
+          float:left;
+          @include rect(50%,50%);
+          @include margin(2% 0 4% 0);
+          img{
+            @include rect(100%,auto);
+          }
+          .description_g {
+            @include margin(5% .3rem 0 .06rem);
+            @include padding(2% 4%);
+            @include font-size(.12rem);
+            @include text-color(#333);
+            @include line-height(.16rem);
+            @include background-color(#eee);
+            @include rect(92%,.36rem);
+            @include overflow(hidden);
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+          .pricewrap {
+            @include padding(4% 6% 2% 6%);
+            @include font-size(.12rem);
+            @include text-color(#051b28);
+            @include flexbox();
+            @include justify-content(space-between);
+            div {
+              //@include rect(.5rem,auto);
+              //@include flex();
+              @include flexbox();
+              @include justify-content(flex-start);
+              span {
+                @include text-color(#ff0000);
+                @include font-size(.12rem);
+                @include line-height(.16rem);
+                @include margin(.01rem 0 .01rem 0);
+                //font-weight: 600;
+              }
+              nth:last-child {
+                @include font-size(.12rem);
+                @include line-height(.16rem);
+                font-weight: 600;
+              }
+            }
+            p{
+              text-decoration: line-through;
+              @include line-height(.12rem);
+              @include margin(.03rem 0 0 0);
+
+            }
+          }
+          .btn{
+            @include rect(90%,auto);
+            @include padding(0 2% 0 2%);
+            @include margin(0 auto);
+            p{
+              display: block;
+              @include padding(.02rem .05rem);
+              @include background-color(#ffb700);
+              @include text-align();
+              @include font-size(.12rem);
+              @include text-color(#333);
+              font-weight: 600;
+              @include line-height(.18rem);
+              i{
+                @include text-color(#fff);
+                display: inline-block;
+                @include margin(.02rem);
+                @include line-height(.14rem);
+                @include font-size(.16rem);
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//    a{
+//      //@include rect(90%,auto);
+
+
+//    .pricewrap {
+//      @include padding(4% 6% 2% 6%);
+//      @include font-size(.12rem);
+//      @include text-color(#051b28);
+//      @include flexbox();
+//      @include justify-content(space-between);
+//      div {
+//        //@include rect(.5rem,auto);
+//        @include flex();
+//        @include justify-content(flex-start);
+//        span {
+//          @include text-color(#ff0000);
+//          @include font-size(.12rem);
+//          @include line-height(.14rem);
+//          font-weight: 600;
+//        }
+//        nth:last-child span {
+//          @include font-size(.12rem);
+//          @include line-height(.14rem);
+//
+//        }
+//      }
+//      p{
+//        text-decoration: line-through;
+//        @include line-height(.12rem);
+//
+//      }
+//    }

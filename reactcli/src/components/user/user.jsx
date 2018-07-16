@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Switch, Rdiv } from 'react-router-dom'
 //引入组件
 
 //引入css样式
+import '@/components/user/user.scss'
 
 class User extends Component {
 	constructor (props) {

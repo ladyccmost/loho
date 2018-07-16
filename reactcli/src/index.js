@@ -1,11 +1,11 @@
 import registerServiceWorker from '@/registerServiceWorker';
 //引入组件
-import Home from '@/components/home.jsx'
-import User from '@/components/user.jsx'
-import Group from '@/components/group.jsx'
+import Home from '@/components/home/home.jsx'
+import User from '@/components/user/user.jsx'
+import Group from '@/components/group/group.jsx'
 import City from '@/components/city.jsx'
-import Kind from '@/components/kind.jsx'
-import Detail from '@/components/detail.jsx'
+import Kind from '@/components/kind/kind.jsx'
+import Detail from '@/components/detail/detail.jsx'
 import ErrorBoundary from '@/ErrorBoundary.jsx'
 import store from '@/store/index.js'
 

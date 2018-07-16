@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 //引入组件
 
 //引入css样式
+import '@/components/kind/kind.scss'
 
 class Kind extends Component {
 	constructor (props) {
